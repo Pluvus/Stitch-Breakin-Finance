@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "6zLDz1t_YRXCEQSmEau6N"
+uri = "file://attached_assets/generated_images/professional_luxury_corporate_office_7375.png"
+type = "image"
+title = "generated_image"

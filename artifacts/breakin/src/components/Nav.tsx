@@ -30,18 +30,18 @@ export default function Nav() {
         style={{ padding: "1rem 4rem", maxWidth: "80rem" }}
       >
         <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center gap-3 cursor-pointer">
-            <img
-              alt="BreakIn Logo"
-              className="h-10 w-auto"
-              src="https://lh3.googleusercontent.com/aida/AP1WRLv1v_WpT0wA4H8VXt-GasdxIzmDr0eXxm1shIjgoB2pQOgfAL-hDkT75-0SJmKr2Km0yRrutf9DWuTj2RLYm2vixy_bS9_tudATF8E9upfLVX4fam5h4mPpASO7Gq2PXbQbk5fZGqcKtC14TirgbTYTNCy3L7jM6q1TsFSzOp2EPZfaSM2BonrEr2rybjLSI4jUQtP-hK9xym73T1ytPkQR0Z7D5pcBrKeTCFrANQkjX4oXZR4dzNClaqHh"
-            />
+          <Link href="/" className="flex items-center gap-2 cursor-pointer" style={{ textDecoration: "none" }}>
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="8" fill="#002045"/>
+              <path d="M11 10h8.5c2.5 0 4.5 1.8 4.5 4.2 0 1.4-.7 2.6-1.8 3.3 1.5.7 2.5 2.1 2.5 3.7 0 2.7-2.2 4.8-5 4.8H11V10zm3 5.5h4.8c1 0 1.7-.7 1.7-1.6 0-.9-.7-1.5-1.7-1.5H14v3.1zm0 6.5h5.2c1.2 0 2-.8 2-1.9 0-1.1-.8-1.9-2-1.9H14v3.8z" fill="#D69E2E"/>
+            </svg>
             <span
               style={{
                 fontFamily: '"Playfair Display", serif',
                 fontSize: "1.5rem",
                 fontWeight: 700,
                 color: "#002045",
+                letterSpacing: "-0.01em",
               }}
             >
               BreakIn

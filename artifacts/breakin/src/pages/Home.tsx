@@ -21,7 +21,7 @@ export default function Home() {
           <img
             alt="BreakIn Hero"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src="https://lh3.googleusercontent.com/aida/AP1WRLtR4MGhtqqvWyecOPM8eE6Fgvec-KDJjw02ooePqZ_rP6pv87WefHLV2ETpJIZheABr2MCditUInz2MV9X-C3V-5RLvxAVBQMR7sDQAfn_eM5DWZK17RlSCHU-UYg1t_G3feyXbZ6UPj55cyKB_6aS3ZkaspbTEyUTni_Gc6MjkWlYvV7TkrftmaDoI1p7oAYbYb88lZBxpmCExkEwBXl7ZwggU5j8g6dl-BvSEEkZB0qL5j2twRnMSe9CE"
+            src="/hero.png"
           />
         </div>
         <div style={{ position: "relative", zIndex: 2, padding: "0 4rem", maxWidth: "80rem", margin: "0 auto", width: "100%" }}>
