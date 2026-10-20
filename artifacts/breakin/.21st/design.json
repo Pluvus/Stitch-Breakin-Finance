@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "project": {
+    "name": "@workspace/breakin",
+    "productType": null,
+    "stack": ["react", "shadcn", "tailwind-v4", "vite"]
+  },
+  "sources": {
+    "tokens": ["src/index.css"],
+    "components": ["src/components/ui"],
+    "assets": [],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "light-and-dark",
+    "colors": {
+      "--muted": {
+        "value": "#5a6964",
+        "source": "src/index.css"
+      }
+    },
+    "typography": {},
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "editorial-medium"
+  },
+  "components": {
+    "installed": [
+      "accordion",
+      "alert",
+      "alert-dialog",
+      "aspect-ratio",
+      "avatar",
+      "badge",
+      "breadcrumb",
+      "button",
+      "button-group",
+      "calendar",
+      "card",
+      "carousel",
+      "chart",
+      "checkbox",
+      "collapsible",
+      "command",
+      "context-menu",
+      "dialog",
+      "drawer",
+      "dropdown-menu",
+      "empty",
+      "field",
+      "form",
+      "hover-card",
+      "input",
+      "input-group",
+      "input-otp",
+      "item",
+      "kbd",
+      "label",
+      "menubar",
+      "navigation-menu",
+      "pagination",
+      "popover",
+      "progress",
+      "radio-group",
+      "resizable",
+      "scroll-area",
+      "select",
+      "separator",
+      "sheet",
+      "sidebar",
+      "skeleton",
+      "slider",
+      "sonner",
+      "spinner",
+      "switch",
+      "table",
+      "tabs",
+      "textarea",
+      "toast",
+      "toaster",
+      "toggle",
+      "toggle-group",
+      "tooltip"
+    ],
+    "preferredPrimitives": ["radix-ui"],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [
+      "Preserve all six product routes and the original application fields.",
+      "Keep application preview messaging honest until a submission API exists.",
+      "Support keyboard focus and one-column mobile layouts."
+    ],
+    "avoid": [
+      "Decorative card grids, glass effects, and placeholder actions.",
+      "Unlabeled form controls."
+    ]
+  },
+  "decisions": [
+    "Use Newsreader for editorial headlines and DM Sans for interface text.",
+    "Use warm paper, deep green, pale sage, and thin dividers; reserve dark panels for key decisions and featured stories.",
+    "Use photo-led introductions, a Radix workshop tab set, and a manual testimonial carousel to support specific reading tasks.",
+    "Use touch-sized carousel controls and a compact story index to avoid repeating full testimonial quotes.",
+    "Use locally stored stock photographs with source credits and keep application preview status explicit.",
+    "Present university marks and firm SVG wordmarks in spacious bordered logo grids adapted from 21st Logo Grid Cloud, with an institution non-endorsement note.",
+    "Use a compact B and slash mark in night green, paper, and sage for the favicon, header, footer, and touch icon.",
+    "Present the 12-course library as a filterable editorial index beside a selected course brief; keep plan pricing explicit per month.",
+    "Use Radix application dropdowns with grouped course choices, two-line option details, and the site's paper and sage palette."
+  ],
+  "evidence": [
+    {
+      "fact": "components.installed",
+      "source": "src/components/ui"
+    },
+    {
+      "fact": "design.colorMode:light-and-dark",
+      "source": "src/index.css"
+    },
+    {
+      "fact": "design.tokens",
+      "source": "src/index.css"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:shadcn",
+      "source": "components.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v3",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:vite",
+      "source": "package.json"
+    }
+  ],
+  "generatedAt": "2026-10-20T04:57:43.394Z"
+}
