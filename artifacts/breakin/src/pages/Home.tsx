@@ -1,240 +1,181 @@
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "wouter";
+import { PageLayout, CallToAction } from "@/components/PageLayout";
+import StoryCarousel from "@/components/StoryCarousel";
+import { ExamplePaths, NetworkShowcase } from "@/components/NetworkShowcase";
+
+const advantages = [
+  {
+    number: "01",
+    title: "Insight from the inside",
+    body: "Learn from professionals who know the recruiting process and the work that follows.",
+  },
+  {
+    number: "02",
+    title: "Practice that translates",
+    body: "Build the technical, behavioral, and networking skills that move an application forward.",
+  },
+  {
+    number: "03",
+    title: "Access within reach",
+    body: "A peer-led model designed to make high-quality coaching more accessible.",
+  },
+];
 
 export default function Home() {
   return (
-    <div style={{ background: "#f7fafc", color: "#181c1e", fontFamily: "Inter, sans-serif", overflowX: "hidden" }}>
-      <Nav />
-
-      {/* Hero Section */}
-      <header style={{ position: "relative", minHeight: "85vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: "linear-gradient(to right, rgba(0,32,69,0.9), rgba(0,32,69,0.2))",
-              zIndex: 1,
-            }}
-          />
-          <img
-            alt="BreakIn Hero"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src="/hero.png"
-          />
-        </div>
-        <div style={{ position: "relative", zIndex: 2, padding: "0 4rem", maxWidth: "80rem", margin: "0 auto", width: "100%" }}>
-          <div style={{ maxWidth: "42rem", color: "#ffffff" }}>
-            <h1
-              style={{
-                fontFamily: '"Playfair Display", serif',
-                fontSize: "clamp(2rem, 5vw, 3rem)",
-                fontWeight: 700,
-                lineHeight: 1.15,
-                marginBottom: "1.5rem",
-                letterSpacing: "-0.02em",
-              }}
-            >
-              Break Into High Finance. <br />
-              <span style={{ color: "#D69E2E" }}>For Everyone.</span>
+    <PageLayout>
+      <section className="home-editorial">
+        <div className="container">
+          <div className="home-editorial-top">
+            <span className="eyebrow">Finance & consulting mentorship</span>
+            <span className="hero-edition">
+              Guidance <span>·</span> Practice <span>·</span> Opportunity
+            </span>
+          </div>
+          <div className="home-editorial-copy">
+            <h1>
+              Ambition deserves <em>an open door.</em>
             </h1>
-            <p style={{ fontSize: "1.125rem", lineHeight: 1.75, opacity: 0.9, marginBottom: "2.5rem", maxWidth: "36rem" }}>
-              Democratizing access to Bulge Bracket Investment Banks and MBB Consulting firms through peer-led mentorship and institutional-grade preparation.
-            </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-              <Link
-                href="/join"
-                style={{
-                  background: "#D69E2E",
-                  color: "#ffffff",
-                  padding: "1rem 2rem",
-                  borderRadius: "0.5rem",
-                  fontWeight: 600,
-                  fontSize: "1rem",
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  boxShadow: "0 8px 24px rgba(0,0,0,0.2)",
-                  transition: "all 0.2s",
-                }}
-              >
-                Start Your Journey
-                <span className="material-symbols-outlined" style={{ fontSize: "20px" }}>arrow_forward</span>
-              </Link>
-              <Link
-                href="/programs"
-                style={{
-                  border: "2px solid rgba(255,255,255,0.4)",
-                  backdropFilter: "blur(4px)",
-                  color: "#ffffff",
-                  padding: "1rem 2rem",
-                  borderRadius: "0.5rem",
-                  fontWeight: 600,
-                  fontSize: "1rem",
-                  textDecoration: "none",
-                  display: "inline-block",
-                  transition: "all 0.2s",
-                }}
-              >
-                View Programs
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Stats Section */}
-      <section style={{ padding: "5rem 0", background: "#ffffff" }}>
-        <div style={{ padding: "0 4rem", maxWidth: "80rem", margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-            <div
-              style={{
-                padding: "2.5rem",
-                borderRadius: "1rem",
-                background: "#1a365d",
-                color: "#ffffff",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-                boxShadow: "0 8px 32px rgba(0,32,69,0.2)",
-                transition: "transform 0.2s",
-              }}
-            >
-              <span style={{ fontSize: "4rem", fontFamily: '"Playfair Display", serif', fontWeight: 700, color: "#89d3d4", lineHeight: 1, marginBottom: "0.5rem" }}>20+</span>
-              <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: "1.5rem", fontWeight: 600 }}>Industry Insiders</h3>
-              <p style={{ fontSize: "1rem", opacity: 0.8, marginTop: "1rem", maxWidth: "24rem" }}>Active professionals from GS, JPM, and McKinsey dedicated to your success.</p>
-            </div>
-            <div
-              style={{
-                padding: "2.5rem",
-                borderRadius: "1rem",
-                border: "2px solid #c4c6cf",
-                background: "#f7fafc",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-                boxShadow: "0 4px 16px rgba(0,32,69,0.05)",
-                transition: "transform 0.2s",
-              }}
-            >
-              <span style={{ fontSize: "4rem", fontFamily: '"Playfair Display", serif', fontWeight: 700, color: "#002045", lineHeight: 1, marginBottom: "0.5rem" }}>50+</span>
-              <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: "1.5rem", fontWeight: 600, color: "#002045" }}>Successful Breakers</h3>
-              <p style={{ fontSize: "1rem", color: "#43474e", marginTop: "1rem", maxWidth: "24rem" }}>Placed into premier investment banking and management consulting roles this year alone.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Affordability First Section */}
-      <section style={{ padding: "6rem 0", background: "#f1f4f6", position: "relative", overflow: "hidden" }}>
-        <div style={{ padding: "0 4rem", maxWidth: "80rem", margin: "0 auto", position: "relative", zIndex: 1 }}>
-          <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-            <span style={{ color: "#13696a", fontWeight: 600, fontSize: "0.875rem", letterSpacing: "0.1em", textTransform: "uppercase" }}>The BreakIn Advantage</span>
-            <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: "2rem", fontWeight: 700, color: "#002045", marginTop: "1rem" }}>Affordability First</h2>
-            <div style={{ width: "5rem", height: "4px", background: "#D69E2E", margin: "1.5rem auto 0", borderRadius: "9999px" }} />
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-            {[
-              { icon: "payments", title: "Peer-to-Peer Pricing", desc: "Eliminating institutional overhead to provide elite coaching at a fraction of traditional consultancy costs.", color: "#13696a" },
-              { icon: "groups", title: "Mission-Driven Mentors", desc: "Our insiders are motivated by impact, not just profit, ensuring you receive genuine, personalized guidance.", color: "#002045" },
-              { icon: "trending_up", title: "Zero-to-One Focus", desc: "Intensive technical and behavioral training designed to take you from a curious student to an offer holder.", color: "#D69E2E" },
-            ].map(({ icon, title, desc, color }) => (
-              <div
-                key={title}
-                className="glass-card"
-                style={{ padding: "2rem", borderRadius: "0.75rem", boxShadow: "0 4px 20px rgba(26,54,93,0.05)", transition: "all 0.3s" }}
-              >
-                <div style={{ width: "3.5rem", height: "3.5rem", background: `${color}1a`, borderRadius: "0.5rem", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.5rem" }}>
-                  <span className="material-symbols-outlined" style={{ color, fontSize: "28px" }}>{icon}</span>
-                </div>
-                <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: "1.5rem", fontWeight: 600, color: "#002045", marginBottom: "1rem" }}>{title}</h4>
-                <p style={{ fontSize: "1rem", color: "#43474e", lineHeight: 1.6 }}>{desc}</p>
+            <div>
+              <p>
+                Practical coaching, sharper preparation, and first-hand guidance
+                for the careers you want to build.
+              </p>
+              <div className="actions">
+                <Link href="/join" className="btn btn-light">
+                  Apply for coaching{" "}
+                  <ArrowUpRight size={18} aria-hidden="true" />
+                </Link>
+                <Link href="/programs" className="text-link light-link">
+                  Explore the programs{" "}
+                  <ArrowUpRight size={17} aria-hidden="true" />
+                </Link>
               </div>
-            ))}
+            </div>
+          </div>
+          <figure className="home-photo">
+            <img
+              src="/stock-collaboration.jpg"
+              alt="Two women working on laptops in a bright office"
+            />
+            <figcaption>
+              <span>Perspective changes everything.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section className="proof-band">
+        <div className="container proof-inner">
+          <div className="proof-intro">
+            <span className="eyebrow">A network that opens doors</span>
+            <p>Experience that reaches beyond a single classroom.</p>
+          </div>
+          <div className="proof-stat">
+            <strong>
+              20<span>+</span>
+            </strong>
+            <span>Industry Insiders sharing their experience</span>
+          </div>
+          <div className="proof-stat">
+            <strong>
+              50<span>+</span>
+            </strong>
+            <span>Successful Breakers across the community</span>
+          </div>
+          <div className="proof-stat">
+            <strong>04</strong>
+            <span>Core workshops across the recruiting journey</span>
           </div>
         </div>
       </section>
-
-      {/* Firms Section */}
-      <section style={{ padding: "4rem 0", background: "#ffffff", borderTop: "1px solid #c4c6cf", borderBottom: "1px solid #c4c6cf" }}>
-        <div style={{ padding: "0 4rem", maxWidth: "80rem", margin: "0 auto" }}>
-          <p style={{ textAlign: "center", fontSize: "0.875rem", fontWeight: 600, color: "#43474e", marginBottom: "2.5rem", letterSpacing: "0.1em", opacity: 0.6, textTransform: "uppercase" }}>
-            Our candidates have secured offers at
+      <NetworkShowcase />
+      <section className="section container approach-section">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">The BreakIn approach</span>
+            <h2>
+              Know the work.
+              <br />
+              <em>Know the way in.</em>
+            </h2>
+          </div>
+          <p className="lead">
+            The strongest preparation connects real career context with the
+            skills employers actually assess.
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "3rem", opacity: 0.4, filter: "grayscale(1)", transition: "all 0.3s" }}>
-            {["Goldman Sachs", "McKinsey", "J.P. Morgan", "BCG", "BlackRock"].map((firm) => (
-              <span key={firm} style={{ fontFamily: '"Playfair Display", serif', fontSize: "1.5rem", fontWeight: 700, color: "#002045", letterSpacing: "-0.02em" }}>
-                {firm.toUpperCase()}
-              </span>
-            ))}
+        </div>
+        <div className="approach-grid">
+          {advantages.map((item) => (
+            <article className="approach-item" key={item.number}>
+              <span className="approach-number">{item.number}</span>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      <ExamplePaths />
+      <section className="journey-section">
+        <div className="container journey-grid">
+          <div className="journey-intro">
+            <span className="eyebrow">A practical path</span>
+            <h2>From first contact to the final conversation.</h2>
+            <p className="lead">
+              Our workshops turn a daunting recruiting process into concrete
+              steps you can practice.
+            </p>
+            <Link href="/programs" className="btn btn-primary">
+              See the curriculum <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
+          </div>
+          <div
+            className="journey-track"
+            aria-label="Recruiting preparation steps"
+          >
+            <div>
+              <span>01 / Connect</span>
+              <strong>Strategic networking</strong>
+              <p>
+                Reach out with purpose and build meaningful professional
+                relationships.
+              </p>
+            </div>
+            <div>
+              <span>02 / Present</span>
+              <strong>Application materials</strong>
+              <p>
+                Show your experience clearly in a competitive screening process.
+              </p>
+            </div>
+            <div>
+              <span>03 / Perform</span>
+              <strong>Interview preparation</strong>
+              <p>
+                Practice technical and behavioral questions before they count.
+              </p>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section style={{ padding: "6rem 4rem" }}>
-        <div
-          style={{
-            maxWidth: "80rem",
-            margin: "0 auto",
-            background: "#002045",
-            borderRadius: "1.5rem",
-            padding: "5rem",
-            textAlign: "center",
-            color: "#ffffff",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
-          <h2 style={{ fontFamily: '"Playfair Display", serif', fontSize: "2rem", fontWeight: 700, marginBottom: "1.5rem", position: "relative", zIndex: 1 }}>
-            Ready to accelerate your career trajectory?
-          </h2>
-          <p style={{ fontSize: "1.125rem", opacity: 0.8, maxWidth: "36rem", margin: "0 auto 2.5rem", position: "relative", zIndex: 1 }}>
-            Join the elite cohort of students breaking into finance this recruiting cycle.
-          </p>
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1.5rem", position: "relative", zIndex: 1 }}>
-            <Link
-              href="/join"
-              style={{
-                background: "#D69E2E",
-                color: "#ffffff",
-                padding: "1.25rem 2.5rem",
-                borderRadius: "0.75rem",
-                fontWeight: 600,
-                fontSize: "1rem",
-                textDecoration: "none",
-                boxShadow: "0 8px 24px rgba(0,0,0,0.3)",
-                transition: "transform 0.2s",
-              }}
-            >
-              Book a Strategy Call
-            </Link>
-            <Link
-              href="/programs"
-              style={{
-                background: "rgba(255,255,255,0.1)",
-                backdropFilter: "blur(8px)",
-                color: "#ffffff",
-                border: "1px solid rgba(255,255,255,0.2)",
-                padding: "1.25rem 2.5rem",
-                borderRadius: "0.75rem",
-                fontWeight: 600,
-                fontSize: "1rem",
-                textDecoration: "none",
-                transition: "all 0.2s",
-              }}
-            >
-              Explore Curriculum
-            </Link>
+      <section className="section container home-stories">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">In their words</span>
+            <h2>Progress you can hear.</h2>
           </div>
+          <Link href="/testimonials" className="text-link">
+            All community stories <ArrowUpRight size={17} aria-hidden="true" />
+          </Link>
         </div>
+        <StoryCarousel compact />
       </section>
-
-      <Footer />
-    </div>
+      <CallToAction
+        title="Make your next application count."
+        body="Tell us where you want to go. We’ll help you identify the preparation that matters most."
+      />
+    </PageLayout>
   );
 }
